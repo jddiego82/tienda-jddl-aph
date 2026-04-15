@@ -4,7 +4,7 @@ import es.iesclaradelrey.da2d1a.tiendajddlaph.common.entities.Categoria;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class RepositorioCategoriaMap
+public class RepositorioCategoriaImpl
         extends RepositorioMapAbstracto<Categoria, Long>
         implements RepositorioCategoria {
 

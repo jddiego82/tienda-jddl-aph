@@ -17,6 +17,6 @@ public class ControladorCategorias {
     @GetMapping
     public String mostrarCategorias(Model model) {
         model.addAttribute("categorias", categoriaServicio.findAll());
-        return "categorias/listado";
+        return "categorias/categorias";
     }
 }

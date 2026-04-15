@@ -942,3 +942,107 @@ footer {
     .footer-top { grid-template-columns: 1fr; gap: 2rem; }
     .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+/* ============================================
+   Sobre Nosotros — Styles
+   ============================================ */
+
+.about-section {
+    padding-top: 120px; /* Espacio extra para el navbar fijo */
+}
+
+.about-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.about-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: var(--texto-sec);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.about-card {
+    background: var(--gris-med);
+    border: 1px solid var(--gris-bor);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform var(--trans), border-color var(--trans);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde);
+}
+
+.about-card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    line-height: 1;
+}
+
+.about-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    letter-spacing: .05em;
+}
+
+.about-card-desc {
+    color: var(--texto-sec);
+    font-size: 0.95rem;
+}
+
+.about-banner {
+    background: var(--verde);
+    color: var(--negro);
+    padding: 4rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2rem 4rem 6rem 4rem; /* Margen adaptado a las secciones */
+    position: relative;
+    overflow: hidden;
+}
+
+.about-banner h2 {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    margin-bottom: 1rem;
+}
+
+.about-banner p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    color: rgba(0,0,0,.75);
+}
+
+/* Responsive para Sobre Nosotros */
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .about-section { padding-top: 100px; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-banner { margin: 2rem 1.5rem; padding: 3rem 1.5rem; }
+}

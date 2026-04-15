@@ -6,7 +6,16 @@
 <body>
 <h1>Categorías</h1>
 <ul>
-    <li th:each="categoria : ${categorias}" th:text="${categoria.nombre}"></li>
+    <li th:each="categoria : ${categorias}">
+        <img th:if="${categoria.imagen != null}"
+             src="/imagenes/categorias/imagenCat.jpg"
+             alt="Imagen categoría" width="100"/>
+        <img th:if="${categoria.imagen == null}"
+             src="/imagenes/categorias/no-image.png"
+             alt="Sin imagen" width="100"/>
+        <strong th:text="${categoria.nombre}"></strong>
+        <p th:text="${categoria.descripcion}"></p>
+    </li>
 </ul>
 </body>
 </html>
