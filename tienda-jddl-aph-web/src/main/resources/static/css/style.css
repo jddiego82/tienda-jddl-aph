@@ -1046,3 +1046,65 @@ footer {
     .about-grid { grid-template-columns: 1fr; }
     .about-banner { margin: 2rem 1.5rem; padding: 3rem 1.5rem; }
 }
+
+/* ============================================
+   Páginas Legales (Condiciones, Privacidad)
+   ============================================ */
+
+.legal-section {
+    padding-top: 120px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-header {
+    margin-bottom: 4rem;
+    border-left: 4px solid var(--verde);
+    padding-left: 1.5rem;
+}
+
+.legal-content {
+    background: var(--gris-osc);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid var(--gris-bor);
+    margin-bottom: 6rem;
+}
+
+.legal-block {
+    margin-bottom: 3rem;
+}
+
+.legal-block h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legal-block p, .legal-block li {
+    color: var(--texto-sec);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.legal-block ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.legal-block ul li::before {
+    content: "→";
+    color: var(--verde);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .legal-section { padding: 100px 1.5rem 0 1.5rem; }
+    .legal-content { padding: 2rem 1.5rem; }
+}
