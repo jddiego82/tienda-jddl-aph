@@ -4,6 +4,7 @@ import es.iesclaradelrey.da2d1a.tiendajddlaph.common.services.CategoriaServicio;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -18,5 +19,11 @@ public class ControladorCategorias {
     public String mostrarCategorias(Model model) {
         model.addAttribute("categorias", categoriaServicio.findAll());
         return "categorias/categorias";
+    }
+
+    @GetMapping("/{id}")
+    public String mostrarDetalleCategoria(@PathVariable Long id, Model model) {
+        model.addAttribute("categoria", categoriaServicio.findById(id));
+        return "categorias/detalle-categoria";
     }
 }

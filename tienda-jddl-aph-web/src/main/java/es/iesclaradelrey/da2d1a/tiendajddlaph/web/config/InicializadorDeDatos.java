@@ -20,21 +20,21 @@ public class InicializadorDeDatos implements CommandLineRunner {
         cat1.setId(1L);
         cat1.setNombre("Camisetas");
         cat1.setDescripcion("Equipaciones de fútbol, camisetas y ropa deportiva");
-        cat1.setImagen("camiseta.jpg");
+        cat1.setImagen("imagenCat.jpg");
         categoriaServicio.guardar(cat1);
 
         Categoria cat2 = new Categoria();
         cat2.setId(2L);
         cat2.setNombre("Pantalones");
         cat2.setDescripcion("Pantalones y ropa deportiva para entrenamiento y partido");
-        cat2.setImagen("pantalones.jpg");
+        cat2.setImagen("imagenCat.jpg");
         categoriaServicio.guardar(cat2);
 
         Categoria cat3 = new Categoria();
         cat3.setId(3L);
         cat3.setNombre("Balones");
         cat3.setDescripcion("Balones y material deportivo para fútbol");
-        cat3.setImagen("balon.jpg");
+        cat3.setImagen("imagenCat.jpg");
         categoriaServicio.guardar(cat3);
 
         Categoria cat4 = new Categoria();
