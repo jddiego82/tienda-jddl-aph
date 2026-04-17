@@ -1,11 +1,14 @@
 package es.iesclaradelrey.da2d1a.tiendajddlaph.web.controllers;
 
+import es.iesclaradelrey.da2d1a.tiendajddlaph.common.entities.Categoria;
 import es.iesclaradelrey.da2d1a.tiendajddlaph.common.services.CategoriaServicio;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/categorias")
@@ -23,7 +26,9 @@ public class ControladorCategorias {
 
     @GetMapping("/{id}")
     public String mostrarDetalleCategoria(@PathVariable Long id, Model model) {
-        model.addAttribute("categoria", categoriaServicio.findById(id));
-        return "categorias/detalle-categoria";
+        Optional<Categoria> optional =  categoriaServicio.findById(id);
+        Categoria categoria = optional.orElse(null);
+        model.addAttribute("categoria", categoria);
+        return "categorias/detalles-categoria";
     }
 }
